@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>JQVMap - World Map</title>
+
+  <link href="styles/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="styles/index.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.vmap.js"></script>
+  <script type="text/javascript" src="scripts/jquery.vmap.canada.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
+
+      jQuery('#vmap').vectorMap({
+        map: 'canada_en',
+        backgroundColor: '#444',
+        borderColor: '#818181',
+        borderOpacity: 0.25,
+        borderWidth: 1,
+        color: '#f4f3f0',
+        enableZoom: true,
+        hoverColor: '#FF1414',
+        hoverOpacity: null,
+        normalizeFunction: 'linear',
+        scaleColors: ['#b6d6ff', '#005ace'],
+        selectedColor: '#bf0f0f',
+        selectedRegions: null,
+        showTooltip: false,
+        onRegionClick: function (code, element, name) {
+          var entry = 'Please enter name of the province selected';
+          var correct = 'CORRECT!';
+          var incorrect = 'INCORRECT' + '\n' + 'Please Try Again!';
+
+          var NT = "Northwest Territories";
+          var NU = "Nunavut";
+          var NS = "Nova Scotia";
+          var MA = "Manitoba";
+          var SA = "Saskatchewan";
+          var QU = "Quebec";
+          var BC = "British Columbia";
+          var YU = "Yukon";
+          var NB = "New Brunswick";
+          var NF = "Newfoundland and Labrador";
+          var ON = "Ontario";
+          var AL = "Alberta";
+
+          if (name == NT) {
+            var guess = prompt(entry);
+            if (guess == NT) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == NU) {
+            var guess = prompt(entry);
+            if (guess == NU) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == NS) {
+            var guess = prompt(entry);
+            if (guess == NS) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == MA) {
+            var guess = prompt(entry);
+            if (guess == MA) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == SA) {
+            var guess = prompt(entry);
+            if (guess == SA) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == QU) {
+            var guess = prompt(entry);
+            if (guess == QU) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == BC) {
+            var guess = prompt(entry);
+            if (guess == BC) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == YU) {
+            var guess = prompt(entry);
+            if (guess == YU) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == NB) {
+            var guess = prompt(entry);
+            if (guess == NB) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == NF) {
+            var guess = prompt(entry);
+            if (guess == NF) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == ON) {
+            var guess = prompt(entry);
+            if (guess == ON) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          } else if (name == AL) {
+            var guess = prompt(entry);
+            if (guess == AL) {
+              alert(correct);
+            } else {
+              alert(incorrect);
+            }
+          }
+        }
+
+      });
+    });
+
+    $(document).ready(function () {
+      $("#answer").hide();
+      $("button").click(function () {
+        $("#answer").toggle(500);
+      });
+    });
+  </script>
+
+
+</head>
+
+<body>
+  <header>
+
+    <h1>CANADA eh?</h1>
+    <img src="images/canada-flag.png" alt="canda-flag">
+  </header>
+  <main>
+    <div class="instructions">
+      <h2>Welcome to the Map of Canada</h2>
+      <p>This is an application designed to help learn the different provinces of Canada.
+      </p>
+      <h3>Instructions:</h3>
+      <ul>
+        <li>Click on one of the provinces / territories</li>
+        <li>Type in the name and press "OK" to check your answer</li>
+        <li>Click on the + or - symbol to zoom in and out of the map</li>
+      </ul>
+    </div>
+    <div>
+      <button>View Answer</button>
+    </div>
+    <div>
+      <img id="answer" src="images/answer.png" alt="">
+    </div>
+    <div id="vmap" style="width: 650px; height: 620px;"></div>
+  </main>
+</body>
+
+</html>

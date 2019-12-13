@@ -1,0 +1,97 @@
+
+
+html {
+  box-sizing: border-box;
+}
+/* Responsive Images Reset */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Body Reset */
+body {
+  background-color: #444;
+  padding: 30px 0px;
+}
+/* Typography Resets */
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+/* End of resets */
+
+h1 {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+h2, h3, h4 {
+  color: #f2f2f2;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;  
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p, li {
+  color: #e6e6e6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3;
+  text-align: center;
+}    
+
+header h1 {
+  margin-bottom: 0;
+}
+
+header img{
+  width: 100px;
+  height: auto;
+}
+
+.instructions {
+  padding: 20px 20px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+#vmap {
+  padding: 20px 0px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: rgba(255, 24, 24, 0.808); 
+  border: none;
+  box-shadow: 1px 1px 20px black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px 75px 30px;
+  cursor: pointer;
+  border-radius: 80px;
+}
+
+#answer {
+  padding: 5px 80px;
+}
